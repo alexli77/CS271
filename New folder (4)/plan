@@ -1,0 +1,144 @@
+
+
+//10 difrerent room names
+//type of rooms    
+// struct up the room 
+
+
+//Gobal numbers
+
+
+bool IsGraphFull() 
+
+bool CanAddConnectionFrom(struct Room * x)
+
+bool ConnectionAlreadyExists(struct Room * x, struct Room * y)
+
+void ConnectRoom(struct Room * x, struct Room * y)
+
+bool IsSameRoom(struct Room * x, struct Room * y)
+
+void AddRandomConnection()
+{
+  struct Room* A;  // Maybe a struct, maybe global arrays of ints
+  struct Room* B;
+
+  while(true)
+  {
+    A = GetRandomRoom();
+
+    if (CanAddConnectionFrom(A) == true)
+      break;
+  }
+
+  do
+  {
+    B = GetRandomRoom();
+  }
+  while(!CanAddConnectionFrom(B) || IsSameRoom(A, B) || ConnectionAlreadyExists(A, B));
+
+  ConnectRoom(A, B);  // TODO: Add this connection to the real variables,
+  ConnectRoom(B, A);  //  because this A and B will be destroyed when this function terminates
+}
+//end of outline, and I followed it extalty, I may change some orders to avoid some conflictions
+
+//Now, I finish the codes of add the connections, then I will setup the room and make it connects correctly.
+
+
+//we need to initciate the connect funtion. 
+
+// To aviod getting the same room, we can bool the room to see if it already exists.
+bool sameroom(int x)
+
+//next, we can build the rooms.
+void setroom()
+
+//we finish building the rooms and connections now. Now I need to make it into files for next part.
+// If we skip this part, we can also copy all the followwing codes into the next part to get the room.
+//However, it is required to write these rooms into files. 
+
+void buildroomfolder()
+
+int main()
+
+/**********************************************************************************************
+
+end of buildrooms.c
+
+***********************************************************************************************/
+
+
+// we need to set up the room first, just copy the things from buildrooms.c
+char* roomList
+char* roomType
+struct Room
+
+//end of room info, we use int instead of struct here because we want the numbers.
+
+
+
+/************************************************************************
+
+  get the time funtion works here
+
+*************************************************************************/
+
+
+void * getTime()
+
+void  showtime()
+
+ void threading() 
+//the source of threading funtion are from https://computing.llnl.gov/tutorials/pthreads
+
+
+/***************************************************************************************
+
+finished the gettime funtion, next part is to read from the files, and get it into the game
+
+***************************************************************************************/
+
+char* getFolder()
+//now we set the place where start to read, next we will read the room files and conver to the array that we can use.
+// It is the step to set up the room files, and we can read every lines from it. 
+
+int setRooms        
+  //copy from the folder using the getfolder funtion                        
+  // fopen to read the file
+  //we need to inti the first room and it connections.
+ //read from the line, the name is in the first line, so do not worry ohter lines here
+  
+  // This part is to avoid get the same room. if it is not same,then we break it. 
+   
+    
+ // we already read the first line and setup the room now. Next, we need to read the other lines which are conncetions.
+// we just basicly copy from above and make it into a loop.
+  ch = strtok(NULL, " ");             //If not found search by the room type and set that
+      
+/********************************************************************************************************************
+
+Play funtion
+
+********************************************************************************************************************/
+
+//need to set a funtion that check the correct name or not.
+
+
+//set a funtion to run the game 
+
+//Function to get the starting room, to tell where the game start, the important is to search th start room from files.
+
+  
+/********************************************************************************************************************
+
+main funtion
+
+********************************************************************************************************************/
+
+
+
+
+
+
+
+
