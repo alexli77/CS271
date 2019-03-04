@@ -147,9 +147,21 @@ char *pch;
             if(argument[1] == NULL){                        //Else, go to directory stated by user
                 chdir(getenv("HOME"));
             } 
-            else{
-                chdir(argument[1]);
-            }
+              else {
+    char cwd[256];
+    char newDirectory[256];
+    getcwd(cwd, sizeof(cwd));
+
+    if(strcmp(argument[1], "..") != 0) {
+      sprintf(newDirectory, "%s/%s", cwd, argument[1]);
+    }
+    else {
+      strcpy(newDirectory, "..");
+    }
+    if(chdir(newDirectory) != 0) {
+      printf("cd: No such file or directory. \n");
+    }
+  }
         } 
         else if(strcmp(argument[0], "status") == 0){        //Print the status
             showStatus(status);
